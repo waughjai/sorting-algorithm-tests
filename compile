@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir -p bin obj
+gcc src/$1.c -o obj/$1.o -c
+gcc src/general_sort.c -o obj/general_sort.o -c
+gcc -o bin/$1 obj/$1.o obj/general_sort.o
